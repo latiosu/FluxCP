@@ -14,8 +14,8 @@ return array(
 	'DefaultLoginGroup'			=> null,
 	'DefaultCharMapServer'		=> null,
 	'DefaultLanguage'			=> env('DEFAULT_LANGUAGE', 'en_us'),					// Specify the default control panel language (see FLUX_ROOT/lang/ directory for available languages.)
-	'SiteTitle'					=> 'Flux Control Panel',	// This value is only used if the theme decides to use it.
-	'ThemeName'					=> array('default', 'bootstrap'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
+	'SiteTitle'					=> 'ChocobotRO Control Panel',	// This value is only used if the theme decides to use it.
+	'ThemeName'					=> array('default'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
 	'ScriptTimeLimit'			=> 0,						// Script execution time limit. Specifies (in seconds) how long a page should run before timing out. (0 means forever)
 	'MissingEmblemBMP'			=> 'empty.bmp',				//
 	'ItemIconNameFormat'		=> '%d.png',				// The filename format for item icons (defaults to {itemid}.png).
@@ -26,7 +26,7 @@ return array(
 	'EmblemCacheInterval'		=> 12,						// Hourly interval to re-cache guild emblems (set to 0 to disable emblem cache).
 	'SessionCookieExpire'		=> 48,						// Duration in hours.
 	'AdminMenuGroupLevel'		=> AccountLevel::LOWGM,		// The starting group ID for which module actions are moved into the admin menu for display.
-	'DateDefaultTimezone'		=> 'UTC',					// The default timezone, consult the PHP manual for valid timezones: http://php.net/timezones (null for defaut system TZ)
+	'DateDefaultTimezone'		=> 'Australia/Sydney',					// The default timezone, consult the PHP manual for valid timezones: http://php.net/timezones (null for defaut system TZ)
 	'DateFormat'				=> 'Y-m-d',					// Default DATE format to be displayed in pages.
 	'DateTimeFormat'			=> 'Y-m-d H:i:s',			// Default DATETIME format to be displayed in pages.
 	'ShowSinglePage'			=> true,					// Whether or not to show the page numbers even if there's only one page.
@@ -82,8 +82,8 @@ return array(
 	'UseCleanUrls'				=> false,					// Set to true if you're running Apache and it supports mod_rewrite and .htaccess files.
 	'DebugMode'					=> false,					// Set to false to minimize technical details from being output by Flux. WARNING: DO NOT USE THIS OPTION ON A PUBLICALLY-ACCESSIBLE CP.
 	'UseCaptcha'				=> true,					// Use CAPTCHA image for account registration to prevent automated account creations. (Requires GD2/FreeType2)
-	'UseLoginCaptcha'			=> false,					// Use CAPTCHA image for account logins. (Requires GD2/FreeType2)
-	'EnableReCaptcha'			=> false,					// Enables the use of reCAPTCHA instead of Flux's native GD2 library (http://www.google.com/recaptcha)
+	'UseLoginCaptcha'			=> true,					// Use CAPTCHA image for account logins. (Requires GD2/FreeType2)
+	'EnableReCaptcha'			=> true,					// Enables the use of reCAPTCHA instead of Flux's native GD2 library (http://www.google.com/recaptcha)
 	'ReCaptchaPublicKey'		=> '...',					// This is your reCAPTCHA public key [REQUIRED FOR RECAPTCHA] (sign up at http://www.google.com/recaptcha)
 	'ReCaptchaPrivateKey'		=> '...',					// This is your reCAPTCHA private key [REQUIRED FOR RECAPTCHA] (sign up at http://www.google.com/recaptcha)
 	'ReCaptchaTheme'			=> 'light',					// ReCaptcha theme to use (Value: dark or light) (see: https://developers.google.com/recaptcha/docs/display#render_param)
@@ -94,11 +94,11 @@ return array(
 	'ColumnSortDescending'		=> ' ▼',					// (Visual) Text displayed for descending sorted column names.
 	'CreditExchangeRate'		=> 1.0,						// The rate at which credits are exchanged for dollars.
 	'MinDonationAmount'			=> 2.0,						// Minimum donation amount. (NOTE: Actual donations made that are less than this account won't be exchanged)
-	'DonationCurrency'			=> 'USD',					// Preferred donation currency. Only donations made in this currency will be processed for credit deposits.
+	'DonationCurrency'			=> 'AUD',					// Preferred donation currency. Only donations made in this currency will be processed for credit deposits.
 	'MoneyDecimalPlaces'		=> 2,						// (Visual) Number of decimal places to display in amount.
 	'MoneyThousandsSymbol'		=> ',',						// (Visual) Thousandths place separator (a period in European currencies).
 	'MoneyDecimalSymbol'		=> '.',						// (Visual) Decimal separator (a comma in European currencies).
-	'AcceptDonations'			=> true,					// Whether or not to accept donations.
+	'AcceptDonations'			=> false,					// Whether or not to accept donations.
 	'PayPalIpnUrl'				=> 'www.sandbox.paypal.com',// The URL for PayPal's IPN responses (www.paypal.com for live and www.sandbox.paypal.com for testing)
 	'PayPalBusinessEmail'		=> 'admin@localhost',		// Enter the e-mail under which you have registered your business account.
 	'PayPalReceiverEmails'		=> array(					// These are the receiver e-mail addresses who are allowed to receive payment.
@@ -217,11 +217,11 @@ return array(
 	'FontResolvedColour'		=> 'green',
 	'FontPendingColour'			=> 'orange',
 	'FontClosedColour'			=> 'darkgrey',
-	'SDEnableCreditRewards'		=> true,					// Show option in Service Desk to reward player X credits for reporting bugs/abuse/etc.
+	'SDEnableCreditRewards'		=> false,					// Show option in Service Desk to reward player X credits for reporting bugs/abuse/etc.
 	'SDCreditReward'			=> 10,						// Number of credits to award account.
 
 // Discord Webhooks
-	'DiscordUseWebhook'			=> false,
+	'DiscordUseWebhook'			=> true,
 	'DiscordWebhookURL'			=> 'enter_webhook_url_from_discord_here',
 	'DiscordSendOnRegister'			=> true,
 	'DiscordSendOnNewTicket'		=> true,
@@ -237,10 +237,10 @@ return array(
 			'HomeLabel'			=> array('module' => 'main'),
 			//'ForumLabel'		=> array('exturl' => 'http://www.fluxro.com/community'),	// External forum link
 			//'ForumLabel'		=> array('module' => 'forums'), 						// Built-in forum link
-			'NewsLabel'			=> array('module' => 'news'),
+			//'NewsLabel'			=> array('module' => 'news'),
 			// Sample items for pages function.
 			'DownloadsLabel'		=> array('module' => 'pages','action'=>'content&path=downloads'),
-			'RulesLabel'			=> array('module' => 'pages','action'=>'content&path=rules'),
+			//'RulesLabel'			=> array('module' => 'pages','action'=>'content&path=rules'),
 			// End sample items for pages function.
 		),
 		'AccountLabel'		=> array(
@@ -252,16 +252,16 @@ return array(
 			'LogoutTitle'		=> array('module' => 'account', 'action' => 'logout'),
 		),
 		'DonationsLabel'		=> array(
-			'PurchaseLabel'		=> array('module' => 'purchase'),
+			//'PurchaseLabel'		=> array('module' => 'purchase'),
 			'DonateLabel'		=> array('module' => 'donate'),
 		),
 		'InformationLabel'	=> array(
 			'ServerInfoLabel'	=> array('module' => 'server', 'action' => 'info'),
 			'ServerStatusLabel'	=> array('module' => 'server', 'action' => 'status'),
-			'WoeHoursLabel'		=> array('module' => 'woe'),
-			'CastlesLabel'		=> array('module' => 'castle'),
-			'WhosOnlineLabel'	=> array('module' => 'character', 'action' => 'online'),
-			'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
+			//'WoeHoursLabel'		=> array('module' => 'woe'),
+			//'CastlesLabel'		=> array('module' => 'castle'),
+			//'WhosOnlineLabel'	=> array('module' => 'character', 'action' => 'online'),
+			//'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
 			'RankingInfoLabel'	=> array('module' => 'ranking', 'action' => 'character'),
 			'VendingInfoLabel'	=> array('module' => 'vending'),
 			'BuyingstoreInfoLabel'	=> array('module' => 'buyingstore'),
@@ -270,10 +270,10 @@ return array(
 			'ItemDatabaseLabel'	=> array('module' => 'item'),
 			'MobDatabaseLabel'	=> array('module' => 'monster'),
 		),
-		'SocialLabel'		=> array(
-			'JoinUsInFacebookLabel'	=> array('exturl' => 'https://www.facebook.com/<change_me>'),
-			'RateUsOnRMSLabel'		=> array('exturl' => '<link_to_RMS>'),
-		),
+		//'SocialLabel'		=> array(
+			//'JoinUsInFacebookLabel'	=> array('exturl' => 'https://www.facebook.com/<change_me>'),
+			//'RateUsOnRMSLabel'		=> array('exturl' => '<link_to_RMS>'),
+		//),
 		'Service Desk'	=> array(
 			'ServiceDeskLabel'	=> array('module' => 'servicedesk', 'action' => 'staffindex'),
 		),

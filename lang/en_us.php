@@ -96,10 +96,10 @@ return array(
     'WoeHoursLabel'            => 'WOE Hours',
     'CastlesLabel'            => 'Castles',
     'WhosOnlineLabel'            => "Who's Online",
-    'MapStaticsLabel'            => 'Map Statics',
+    'MapStaticsLabel'            => 'Map Statistics',
     'RankingInfoLabel'            => 'Ranking Info',
     'VendingInfoLabel'            => 'Vending Info',
-    'BuyingstoreInfoLabel'        => 'Buyingstore Info',
+    'BuyingstoreInfoLabel'        => 'Buying Info',
     'ItemDatabaseLabel'            => 'Item Database',
     'MobDatabaseLabel'            => 'Mob Database',
     'JoinUsInFacebookLabel'            => 'Join us on Facebook!',
@@ -658,12 +658,12 @@ return array(
 	
 	// Module: main
 	// - main/index
-	'MainPageHeading'         => 'Flux Control Panel',
+	'MainPageHeading'         => 'ChocobotRO Control Panel',
 	'MainPageInfo'            => "If you are seeing this page, it's likely that you've successfully installed Flux.",
 	'MainPageInfo2'           => "Would you like to change this page? Well, here's how you can:",
 	'MainPageStep1'           => 'Open "%s" in your text editor.',
 	'MainPageStep2'           => 'Edit the file from your editor and save your changes.',
-	'MainPageThanks'          => 'Thanks for using Flux!',
+	'MainPageThanks'          => 'Thanks for using ChocobotRO CP!',
 	'MainPageWelcome'         => 'Welcome to %s!',
 	// - main/pagenotfound
 	'PageNotFoundTitle'       => '404 Page Not Found',
@@ -694,7 +694,7 @@ return array(
 	// - server/info
 	'ServerInfoTitle'         => 'Server Information',
 	'ServerInfoHeading'       => 'Server Information',
-	'ServerInfoText'          => "Here you'll find various server information.",
+	'ServerInfoText'          => "Server rates (EXP/Drops/MVP): 5x/5x/3x",
 	'ServerInfoSubHeading'    => 'Information for %s',
 	'ServerInfoSubHeading2'   => 'Job Class Information for %s',
 	'ServerInfoAccountLabel'  => 'Accounts',
