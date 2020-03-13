@@ -1345,8 +1345,8 @@ class Template
 	 */
 	public function iconImage($itemID)
 	{
-		$path = sprintf(FLUX_DATA_DIR . "/items/icons/" . Flux::config('ItemIconNameFormat'), $itemID);
-		$link = preg_replace('&/{2,}&', '/', "{$this->basePath}/$path");
+		$path = sprintf(PUBLIC_FLUX_DATA_DIR . "/items/icons/" . Flux::config('ItemIconNameFormat'), $itemID);
+		$link = substr($path, strlen(FLUX_ROOT . "/public"));
 		return file_exists($path) ? $link : false;
 	}
 
@@ -1355,8 +1355,8 @@ class Template
 	 */
 	public function itemImage($itemID)
 	{
-		$path = sprintf(FLUX_DATA_DIR . "/items/images/" . Flux::config('ItemImageNameFormat'), $itemID);
-		$link = preg_replace('&/{2,}&', '/', "{$this->basePath}/$path");
+		$path = sprintf(PUBLIC_FLUX_DATA_DIR . "/items/images/" . Flux::config('ItemImageNameFormat'), $itemID);
+		$link = substr($path, strlen(FLUX_ROOT . "/public"));
 		return file_exists($path) ? $link : false;
 	}
 
@@ -1365,8 +1365,8 @@ class Template
 	 */
 	public function monsterImage($monsterID)
 	{
-		$path = sprintf(FLUX_DATA_DIR . "/monsters/" . Flux::config('MonsterImageNameFormat'), $monsterID);
-		$link = preg_replace('&/{2,}&', '/', "{$this->basePath}/$path");
+		$path = sprintf(PUBLIC_FLUX_DATA_DIR . "/monsters/" . Flux::config('MonsterImageNameFormat'), $monsterID);
+		$link = substr($path, strlen(FLUX_ROOT . "/public"));
 		return file_exists($path) ? $link : false;
 	}
 
@@ -1375,8 +1375,8 @@ class Template
 	 */
 	public function jobImage($gender, $jobID)
 	{
-		$path = sprintf(FLUX_DATA_DIR . "/jobs/images/%s/" . Flux::config('JobImageNameFormat'), $gender, $jobID);
-		$link = preg_replace('&/{2,}&', '/', "{$this->basePath}/$path");
+		$path = sprintf(PUBLIC_FLUX_DATA_DIR . "/jobs/images/%s/" . Flux::config('JobImageNameFormat'), $gender, $jobID);
+		$link = substr($path, strlen(FLUX_ROOT . "/public"));
 		return file_exists($path) ? $link : false;
 	}
 

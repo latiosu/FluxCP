@@ -19,6 +19,7 @@ if(env('APP_ENV', 'debug') === 'debug') {
 }
 
 define('FLUX_ROOT',			str_replace('\\', '/', dirname(__FILE__) . '/..'));
+define('PUBLIC_FLUX_DATA_DIR',  FLUX_ROOT . '/public/data');
 define('FLUX_DATA_DIR',		FLUX_ROOT . '/data');
 define('FLUX_CONFIG_DIR',	FLUX_ROOT . '/config');
 define('FLUX_LIB_DIR',		FLUX_ROOT . '/lib');
