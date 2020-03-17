@@ -64,7 +64,7 @@ return array(
 			'online'		=> AccountLevel::ANYONE,
 			'prefs'			=> AccountLevel::NORMAL,
 			'changeslot'	=> AccountLevel::NORMAL,
-			'resetlook'		=> AccountLevel::LOWGM,
+			'resetlook'		=> AccountLevel::NORMAL,
 			'resetpos'		=> AccountLevel::NORMAL,
 			'mapstats'		=> AccountLevel::ANYONE,
 			'divorce'		=> AccountLevel::NORMAL

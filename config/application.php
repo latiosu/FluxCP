@@ -93,14 +93,14 @@ return array(
 	'ColumnSortAscending'		=> ' ▲',					// (Visual) Text displayed for ascending sorted column names.
 	'ColumnSortDescending'		=> ' ▼',					// (Visual) Text displayed for descending sorted column names.
 	'CreditExchangeRate'		=> 1.0,						// The rate at which credits are exchanged for dollars.
-	'MinDonationAmount'			=> 2.0,						// Minimum donation amount. (NOTE: Actual donations made that are less than this account won't be exchanged)
+	'MinDonationAmount'			=> 5.0,						// Minimum donation amount. (NOTE: Actual donations made that are less than this account won't be exchanged)
 	'DonationCurrency'			=> 'AUD',					// Preferred donation currency. Only donations made in this currency will be processed for credit deposits.
 	'MoneyDecimalPlaces'		=> 2,						// (Visual) Number of decimal places to display in amount.
 	'MoneyThousandsSymbol'		=> ',',						// (Visual) Thousandths place separator (a period in European currencies).
 	'MoneyDecimalSymbol'		=> '.',						// (Visual) Decimal separator (a comma in European currencies).
 	'AcceptDonations'			=> false,					// Whether or not to accept donations.
 	'PayPalIpnUrl'				=> 'www.sandbox.paypal.com',// The URL for PayPal's IPN responses (www.paypal.com for live and www.sandbox.paypal.com for testing)
-	'PayPalBusinessEmail'		=> 'admin@localhost',		// Enter the e-mail under which you have registered your business account.
+	'PayPalBusinessEmail'		=> 'some.ericliu@gmail.com',		// Enter the e-mail under which you have registered your business account.
 	'PayPalReceiverEmails'		=> array(					// These are the receiver e-mail addresses who are allowed to receive payment.
 		//'admin2@localhost',								// -- This array may be empty if you only use one e-mail
 		//'admin3@localhost'								// -- because your Business Email is also checked.
@@ -260,8 +260,8 @@ return array(
 			'ServerStatusLabel'	=> array('module' => 'server', 'action' => 'status'),
 			//'WoeHoursLabel'		=> array('module' => 'woe'),
 			//'CastlesLabel'		=> array('module' => 'castle'),
-			//'WhosOnlineLabel'	=> array('module' => 'character', 'action' => 'online'),
-			//'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
+			'WhosOnlineLabel'	=> array('module' => 'character', 'action' => 'online'),
+			'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
 			'RankingInfoLabel'	=> array('module' => 'ranking', 'action' => 'character'),
 			'VendingInfoLabel'	=> array('module' => 'vending'),
 			'BuyingstoreInfoLabel'	=> array('module' => 'buyingstore'),
