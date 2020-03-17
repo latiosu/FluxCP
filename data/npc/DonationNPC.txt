@@ -3,11 +3,11 @@ map,x,y,d	script	Donor Rewards Redeemer	987,{
 	// --- SET THESE BEFORE LOADING THE SCRIPT! ---
 	
 	// Server Name
-	set .serverName$,"FluxRO";
+	set .serverName$,"ChocobotRO";
 	
 	// NPC Name to display during chat.
-	// Default: "[Donor Rewards Redeemer]"
-	set .npcName$,"[Donor Rewards Redeemer]";
+	// Default: "[Donation Rewards Redeemer]"
+	set .npcName$,"[Donation Rewards Redeemer]";
 	
 	// DO NOT CHANGE THIS!
 	// Default: "cp_redeemlog"
