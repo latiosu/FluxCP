@@ -694,14 +694,14 @@ return array(
 	// - server/info
 	'ServerInfoTitle'         => 'Server Information',
 	'ServerInfoHeading'       => 'Server Information',
-	'ServerInfoText'          => "Server rates (EXP/Drops/MVP): 5x/5x/3x",
+	'ServerInfoText'          => "Server rates (EXP/Drops/MVP): 5x/5x/5x",
 	'ServerInfoSubHeading'    => 'Information for %s',
 	'ServerInfoSubHeading2'   => 'Job Class Information for %s',
 	'ServerInfoAccountLabel'  => 'Accounts',
 	'ServerInfoCharLabel'     => 'Characters',
 	'ServerInfoGuildLabel'    => 'Guilds',
 	'ServerInfoPartyLabel'    => 'Parties',
-	'ServerInfoZenyLabel'     => 'Zeny',
+	'ServerInfoZenyLabel'     => 'Zeny on hand',
 	// - server/status
 	'ServerStatusTitle'       => 'Current Server Status',
 	'ServerStatusHeading'     => 'Server Status',
