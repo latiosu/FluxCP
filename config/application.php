@@ -240,7 +240,7 @@ return array(
 			//'NewsLabel'			=> array('module' => 'news'),
 			// Sample items for pages function.
 			'DownloadsLabel'		=> array('module' => 'pages','action'=>'content&path=downloads'),
-			//'RulesLabel'			=> array('module' => 'pages','action'=>'content&path=rules'),
+			'RulesLabel'			=> array('module' => 'pages','action'=>'content&path=rules'),
 			// End sample items for pages function.
 		),
 		'AccountLabel'		=> array(
