@@ -258,8 +258,8 @@ return array(
 		'InformationLabel'	=> array(
 			'ServerInfoLabel'	=> array('module' => 'server', 'action' => 'info'),
 			'ServerStatusLabel'	=> array('module' => 'server', 'action' => 'status'),
-			//'WoeHoursLabel'		=> array('module' => 'woe'),
-			//'CastlesLabel'		=> array('module' => 'castle'),
+			'WoeHoursLabel'		=> array('module' => 'woe'),
+			'CastlesLabel'		=> array('module' => 'castle'),
 			'WhosOnlineLabel'	=> array('module' => 'character', 'action' => 'online'),
 			'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
 			'RankingInfoLabel'	=> array('module' => 'ranking', 'action' => 'character'),

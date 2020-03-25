@@ -99,10 +99,15 @@ return array(
 				'WoeDayTimes'   => array(
 					//array(0, '12:00', 0, '14:00'), // Example: Starts Sunday 12:00 PM and ends Sunday 2:00 PM
 					//array(3, '14:00', 3, '15:00')  // Example: Starts Wednesday 2:00 PM and ends Wednesday 3:00 PM
+					array(3, '19:00', 3, '21:00'),
+					array(4, '19:00', 4, '21:00'),
+					array(6, '08:00', 6, '10:00'),
+					array(0, '08:00', 0, '10:00'),
+					array(0, '18:00', 0, '19:00')
 				),
 				// Modules and/or actions to disallow access to during WoE.
 				'WoeDisallow'   => array(
-					array('module' => 'character', 'action' => 'online'),  // Disallow access to "Who's Online" page during WoE.
+					//array('module' => 'character', 'action' => 'online'),  // Disallow access to "Who's Online" page during WoE.
 					array('module' => 'character', 'action' => 'mapstats') // Disallow access to "Map Statistics" page during WoE.
 				)
 			)
