@@ -14,6 +14,7 @@
 /data/logs/mysql
 /data/logs/schemas
 /data/logs/transactions
+/data/logs/paypal.log.php
 
 # Caches
 /data/tmp/*.php
