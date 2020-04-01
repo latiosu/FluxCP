@@ -8,6 +8,8 @@
 /data/monsters/*.png
 /data/monsters/*.gif
 
+/data/tmp/emblems/
+
 # Logs
 /data/logs/errors
 /data/logs/mail

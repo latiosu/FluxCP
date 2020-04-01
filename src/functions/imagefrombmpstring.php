@@ -24,7 +24,8 @@ function imagecreatefrombmpstring($im) {
             $b = ord($palette{$j++});
             $g = ord($palette{$j++});
             $r = ord($palette{$j++});
-            $a = ord($palette{$j++});
+            // Convert 8-bit alpha to imagecolorallocatealpha compatible value
+            $a = 127 - (ord($palette{$j++}) >> 1);
             if ( ($r & 0xf8 == 0xf8) && ($g == 0) && ($b & 0xf8 == 0xf8))
                 $a = 127; // alpha = 255 on 0xFF00FF
             $pal[$n++] = imagecolorallocatealpha($imres, $r, $g, $b, $a);
