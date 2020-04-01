@@ -694,7 +694,7 @@ return array(
 	// - server/info
 	'ServerInfoTitle'         => 'Server Information',
 	'ServerInfoHeading'       => 'Server Information',
-	'ServerInfoText'          => "Server rates (EXP/Drops/MVP): 5x/5x/5x",
+	'ServerInfoText'          => "Server rates (Base/Job/Drop): 8x/8x/5x",
 	'ServerInfoSubHeading'    => 'Information for %s',
 	'ServerInfoSubHeading2'   => 'Job Class Information for %s',
 	'ServerInfoAccountLabel'  => 'Accounts',
