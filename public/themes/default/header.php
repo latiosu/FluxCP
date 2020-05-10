@@ -135,7 +135,7 @@ if (!defined('FLUX_ROOT')) exit; ?>
 				<td bgcolor="#8ebceb" width="20"></td>
 				<td bgcolor="#8ebceb" colspan="3">
 					<a href="<?php echo $this->basePath ?>">
-						<img src="<?php echo $this->themePath($session->account->group_level >= Flux::config('AdminMenuGroupLevel') ? 'img/logo_admin.gif' : 'img/logo.gif') ?>" id="logo" />
+						<img src="<?php echo $this->themePath($session->account->group_level >= Flux::config('AdminMenuGroupLevel') ? 'img/logo_admin.png' : 'img/logo.png') ?>" id="logo" />
 					</a>
 				</td>
 				<td bgcolor="#8ebceb" width="20"></td>
