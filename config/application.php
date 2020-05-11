@@ -270,10 +270,11 @@ return array(
 			'ItemDatabaseLabel'	=> array('module' => 'item'),
 			'MobDatabaseLabel'	=> array('module' => 'monster'),
 		),
-		//'SocialLabel'		=> array(
-			//'JoinUsInFacebookLabel'	=> array('exturl' => 'https://www.facebook.com/<change_me>'),
-			//'RateUsOnRMSLabel'		=> array('exturl' => '<link_to_RMS>'),
-		//),
+		'SocialLabel'		=> array(
+			'DiscordLabel'		=> array('exturl' => 'https://discord.gg/d8jsfXe'),
+			'WikiLabel'		=> array('exturl' => 'https://wiki.chocobot.cloud/'),
+			'RateUsOnRMSLabel'	=> array('exturl' => 'https://ratemyserver.net/index.php?page=writereview&serid=21046&url_sname=ChocobotRO'),
+		),
 		'Service Desk'	=> array(
 			'ServiceDeskLabel'	=> array('module' => 'servicedesk', 'action' => 'staffindex'),
 		),

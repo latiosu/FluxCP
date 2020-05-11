@@ -102,8 +102,9 @@ return array(
     'BuyingstoreInfoLabel'        => 'Buying Info',
     'ItemDatabaseLabel'            => 'Item Database',
     'MobDatabaseLabel'            => 'Mob Database',
-    'JoinUsInFacebookLabel'            => 'Join us on Facebook!',
-    'RateUsOnRMSLabel'            => 'Rate us on RMS!',
+    'RateUsOnRMSLabel'        => 'Rate us on RMS!',
+    'DiscordLabel'            => 'Discord',
+    'WikiLabel'               => 'Wiki',
 	
 	// Module: account
 	// - account/changemail
