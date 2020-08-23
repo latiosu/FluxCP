@@ -108,7 +108,7 @@ return array(
 				// Modules and/or actions to disallow access to during WoE.
 				'WoeDisallow'   => array(
 					//array('module' => 'character', 'action' => 'online'),  // Disallow access to "Who's Online" page during WoE.
-					array('module' => 'character', 'action' => 'mapstats') // Disallow access to "Map Statistics" page during WoE.
+					//array('module' => 'character', 'action' => 'mapstats') // Disallow access to "Map Statistics" page during WoE.
 				)
 			)
 		)
