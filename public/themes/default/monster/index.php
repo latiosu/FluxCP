@@ -2,8 +2,7 @@
 
 if (!defined('FLUX_ROOT')) exit; ?>
 <h2>Monsters</h2>
-<p class="toggler"><a href="javascript:toggleSearchForm()">Search...</a></p>
-<form class="search-form" method="get">
+<form method="get">
 	<?php echo $this->moduleActionFormInputs($params->get('module')) ?>
 	<p>
 		<label for="monster_id">Monster ID:</label>
