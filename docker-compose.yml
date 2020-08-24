@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+    fluxcp:
+        ports:
+          - 80:80
+        image: fluxcp:local
+        container_name: fluxcp
+        volumes:
+            - .:/var/www/html
+            - ./vhost.conf:/etc/apache2/sites-enabled/vhost.conf
+    composer:
+        restart: 'no'
+        image: composer:1.10
+        command: install
+        volumes:
+            - .:/app

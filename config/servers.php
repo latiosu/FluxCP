@@ -13,10 +13,10 @@ return array(
 			'Convert'    => 'utf8',
 				// -- 'Convert' option only works when 'Encoding' option is specified and iconv (http://php.net/iconv) is available.
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
-			'Hostname'   => '127.0.0.1',
-			'Username'   => 'ragnarok',
-			'Password'   => 'ragnarok',
-			'Database'   => 'ragnarok',
+			'Hostname'   => env('DB_HOST', '127.0.0.1'),
+			'Username'   => env('DB_USER', 'ragnarok'),
+			'Password'   => env('DB_PASS', 'ragnarok'),
+			'Database'   => env('DB_NAME', 'ragnarok'),
 			'Persistent' => true,
 			'Timezone'   => '+11:00' // Example: '+0:00' is UTC.
 			// The possible values of 'Timezone' is as documented from the MySQL website:
@@ -34,17 +34,17 @@ return array(
 			'Convert'    => 'utf8',
 				// -- 'Convert' option only works when 'Encoding' option is specified and iconv (http://php.net/iconv) is available.
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
-			'Hostname'   => '127.0.0.1',
-			'Username'   => 'ragnarok',
-			'Password'   => 'ragnarok',
-			'Database'   => 'ragnarok',
+			'Hostname'   => env('LOG_DB_HOST', '127.0.0.1'),
+			'Username'   => env('LOG_DB_USER', 'ragnarok'),
+			'Password'   => env('LOG_DB_PASS', 'ragnarok'),
+			'Database'   => env('LOG_DB_NAME', 'ragnarok'),
 			'Persistent' => true,
 			'Timezone'   => '+11:00' // Possible values is as described in the comment in DbConfig.
 		),
 		// Login server configuration.
 		'LoginServer'    => array(
-			'Address'  => '127.0.0.1',
-			'Port'     => 6900,
+			'Address'  => env('LOGIN_SERVER_ADDRESS', '127.0.0.1'),
+			'Port'     => env('LOGIN_SERVER_PORT', 6900),
 			'UseMD5'   => false,
 			'NoCase'   => true, // rA account case-sensitivity; Default: Case-INsensitive (true).
 			'GroupID'  => 0,    // Default account group ID during registration.
@@ -83,12 +83,12 @@ return array(
 					'MvpItem'     => 300
 				),
 				'CharServer'      => array(
-					'Address'     => '127.0.0.1',
-					'Port'        => 6121
+					'Address'     => env('CHAR_SERVER_ADDRESS', '127.0.0.1'),
+					'Port'        => env('CHAR_SERVER_PORT', 6121)
 				),
 				'MapServer'       => array(
-					'Address'     => '127.0.0.1',
-					'Port'        => 5121
+					'Address'     => env('MAP_SERVER_ADDRESS', '127.0.0.1'),
+					'Port'        => env('MAP_SERVER_PORT', 5121)
 				),
 				// -- WoE days and times --
 				// First parameter: Starding day 0=Sunday / 1=Monday / 2=Tuesday / 3=Wednesday / 4=Thursday / 5=Friday / 6=Saturday
