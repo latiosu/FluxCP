@@ -690,7 +690,7 @@ class Template
 	 */
 	public function formatDate($date = null)
 	{
-		$ts = $date ? strtotime($date) : time();
+		$ts = $date ? strtotime($date.' '.Flux::config('DatabaseTimezone')) : time();
 		return date(Flux::config('DateFormat'), $ts);
 	}
 
@@ -703,7 +703,8 @@ class Template
 	 */
 	public function formatDateTime($dateTime = null)
 	{
-		$ts = $dateTime ? strtotime($dateTime) : time();
+
+		$ts = $dateTime ? strtotime($dateTime.' '.Flux::config('DatabaseTimezone')) : time();
 		return date(Flux::config('DateTimeFormat'), $ts);
 	}
 
