@@ -126,17 +126,68 @@ class PaymentNotifyRequest
 	}
 
 	/**
+	 * Check if IP is a trusted PayPal IPN IP address/range.
+	 *
+	 * @access public
+	 */
+	public function is_trusted_ip($ip){
+		$allowed_ranges = [
+			'64.4.240.0/21',
+			'64.4.248.0/22',
+			'66.211.168.0/22',
+			'91.243.72.0/23',
+			'173.0.80.0/20',
+			'173.0.81.0/24',
+		];
+		foreach ($allowed_ranges as $range) {
+			if (ip_in_range($ip, $range)) {
+				$this->logPayPal('IP %s is in range %s', $ip, $range);
+				return true;
+			}
+		}
+		$this->logPayPal('IP %s did not match any ranges', $ip);
+		return false;
+	}
+
+	/**
+	 * Check if a given ip is in a network
+	 * @param  string $ip    IP to check in IPV4 format eg. 127.0.0.1
+	 * @param  string $range IP/CIDR netmask eg. 127.0.0.0/24, also 127.0.0.1 is accepted and /32 assumed
+	 * @return boolean true if the ip is in this range / false if not.
+	 */
+	function ip_in_range( $ip, $range ) {
+		if ( strpos( $range, '/' ) == false ) {
+			$range .= '/32';
+		}
+		// $range is in IP/CIDR format eg 127.0.0.1/24
+		list( $range, $netmask ) = explode( '/', $range, 2 );
+		$range_decimal = ip2long( $range );
+		$ip_decimal = ip2long( $ip );
+		$wildcard_decimal = pow( 2, ( 32 - $netmask ) ) - 1;
+		$netmask_decimal = ~ $wildcard_decimal;
+		return ( ( $ip_decimal & $netmask_decimal ) == ( $range_decimal & $netmask_decimal ) );
+	}
+
+	/**
 	 * Process transaction.
 	 *
 	 * @access public
 	 */
 	public function process()
 	{
-		$allowed_hosts = ['ipn.sandbox.paypal.com', 'notify.paypal.com'];
+		$allowed_hosts = [
+			'ipn.sandbox.paypal.com',
+			'notify.paypal.com',
+			'66.211.170.66',
+			'173.0.81.1',
+			'173.0.81.33',
+			'173.0.81.65',
+			'173.0.81.140',
+		];
 		$received_from = gethostbyaddr($this->fetchIP());
 		$this->logPayPal('Received notification from %s (%s)', $this->fetchIP(), $received_from);
 
-		if (in_array($received_from, $allowed_hosts) && $this->verify()) {
+		if ((in_array($received_from, $allowed_hosts) || $this->is_trusted_ip($received_from)) && $this->verify()) {
 			$this->logPayPal('Proceeding to validate the authenticity of the transaction...');
 
 			$accountEmails = Flux::config('PayPalReceiverEmails');
